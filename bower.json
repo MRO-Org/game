@@ -1,0 +1,30 @@
+{
+  "name": "game",
+  "version": "0.0.0",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "jquery": "2.1.4",
+    "backbone": "1.2.0",
+
+    "underscore": "~1.5.1",
+    "chai": "~1.8.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "> 1.0 < 1.8"
+  },
+  "overrides": {
+    "bootstrap-less": {
+      "ignore": [
+        "*"
+      ]
+    }
+  }
+}
