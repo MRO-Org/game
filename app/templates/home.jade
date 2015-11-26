@@ -1,10 +1,42 @@
-<h1>Home</h1>
-<div class="btn-group" role="toolbar">
-<button type="button" class="btn btn-default">Left</button>
-<button type="button" class="btn btn-default">Middle</button>
-<button type="button" class="btn btn-default">Right</button>
-</div>
+.container
+  .main-banner
+    #header
+      h1 MyProject
+      .input-field.col.s6
+        i.prefix.fa.fa-search
+        input#icon_prefix(type='text').validate
+        label(for='icon_prefix') Rechercher dans MyProject
+    #info
+      p Rejoignez des millions de joueurs en ligne et découvrez les expériences de jeu les plus épiques qui soient !
+      a.btn.waves-effect.waves-light(href='about') En savoir plus
+      &nbsp;        
+      a.btn.waves-effect.waves-light(href='download') Télécharger le logiciel
+      br
+      br
+      #auth
+        a.btn.waves-effect.waves-light Créer un compte
+        &nbsp;        
+        a.btn.waves-effect.waves-light Connexion
+  .row
 
-<button type="button" class="btn btn-default" aria-label="Left Align">
-<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-</button>
+    each val in ['Adventure', 'Dungeon', 'Strategy', 'Arena', 'Cards', 'Fighting', 'Puzzle', 'Racing']
+      .col.s12.m6.l4
+        .card.hoverable.small
+              .card-image
+                img(src="./images/sample-1.jpg")
+              .card-action
+                a(href="#")= val
+
+  #footer
+    #footermenu
+      #about
+      #products
+      #account
+      #support
+    #footerbar
+      a Conditions d'utilisation
+      a Mentions légales
+      a Politique de confidentialité
+      a Droits d'auteur
+      a Nous contacter
+      a Europe - Français

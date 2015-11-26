@@ -1,11 +1,20 @@
-nav.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      button.navbar-toggle.collapsed
-      a.navbar-brand(href='#') MRO
-    .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li(class=page === 'home' ? 'active' : 'inactive'): a.menu1-button(href='home') Home
-        li(class=page === 'about' ? 'active' : 'inactive'): a.menu3-button(href='about') About
+
+nav
+  .nav-wrapper
+    a(href='#').brand-logo MyProject
+    a(href='#', data-activates='mobile-demo').button-collapse
+      i.fa.fa-bars
+
+    ul.right.hide-on-med-and-down
+      li: a Connectez-vous
+      li: a ou
+      li: a créez un compte
+      li(class=page === 'menu_2' ? 'active' : 'inactive'): a.menu2-button(href='menu_2') Compte
+      li(class=page === 'about' ? 'active' : 'inactive'): a.menu3-button(href='about') Assistance
+
+    ul.side-nav#mobile-demo
+      li(class=page === 'home' ? 'active' : 'inactive'): a.menu1-button(href='home') Home
+      li(class=page === 'menu_2' ? 'active' : 'inactive'): a.menu2-button(href='menu_2') Compte
+      li(class=page === 'about' ? 'active' : 'inactive'): a.menu3-button(href='about') Assistance
 
 .content-body

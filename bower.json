@@ -10,20 +10,10 @@
     "test"
   ],
   "dependencies": {
-    "bootstrap": "3.3.5",
-    "jquery": "2.1.4",
-    "backbone": "1.2.0",
-
-    "chai": "~1.8.0"
+    "materialize": "0.97.3",
+    "backbone": "1.2.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "> 1.0 < 1.8"
-  },
-  "overrides": {
-    "bootstrap-less": {
-      "ignore": [
-        "*"
-      ]
-    }
   }
 }

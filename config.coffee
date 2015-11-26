@@ -1,19 +1,13 @@
 exports.config =
   files:
-  
     javascripts:
       joinTo:
         'js/app.js': /^app/
-        'js/vendor.js': /^(bower_components|vendor)/
-
+        'js/vendor.js': /^bower_components/
     stylesheets:
-      joinTo: 
-        'css/app.css':  /^app/
-
+      joinTo: 'css/app.css'
     templates:
-      joinTo:
-        'js/templates.js': /^app/
-
+      joinTo: 'js/templates.js'
 overrides:
   production:
     sourceMaps: 'absoluteUrl'
