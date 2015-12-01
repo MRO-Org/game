@@ -21,7 +21,6 @@ angular.module('app')
 
     .when('/',      {templateUrl: 'app/modules/home/home.html'})
     .when('/about', {templateUrl: 'app/modules/home/about.html'})
-    .when('/media', {templateUrl: 'app/modules/home/media.html'})
     .when('/profile', {templateUrl: 'app/modules/profile/profile.html'})
     .when('/game', {templateUrl: 'app/modules/game/game.html'})
 
