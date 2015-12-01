@@ -5,8 +5,10 @@ http://project-myrpgonline.herokuapp.com/play
 
 ## Stack
 
-* UI http://getbootstrap.com/
-* CORE http://backbonejs.org/
+* UI https://material.angularjs.org/latest/demo/autocomplete
+* CORE https://docs.angularjs.org/tutorial/step_01
+* SERVER http://expressjs.com/guide/routing.html
+* DATA TODO
 
 ## Getting started
 
