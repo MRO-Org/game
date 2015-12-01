@@ -8,7 +8,6 @@ angular.module('app', [
   'material.core',
 
   'app.version',
-  'app.directives',
   'app.modules.home',
   'app.modules.game',
 ,]);
