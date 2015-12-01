@@ -1,11 +1,12 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('app', [
-  'ngCookies',
   'ngResource',
   'ngRoute',
-  'ui.bootstrap',
   'templates',
+  'ngMaterial',
+  'material.core',
+
   'app.version',
   'app.directives',
   'app.modules.home',
