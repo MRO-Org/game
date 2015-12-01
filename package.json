@@ -1,14 +1,14 @@
 {
-  "name": "game",
+  "name": "site",
   "version": "0.0.0",
-  "main": "server.js",
+
   "scripts": {
     "postinstall": "bower install && brunch build --env fast",
     "brunch": "brunch",
     "bower": "bower",
-    "dev": "brunch watch --server",
-    "start": "node server.js"
+    "dev": "brunch watch --server"
   },
+
   "dependencies": {
     "bower": "~1.6.4",
     "brunch": "^1.8.5",
@@ -17,13 +17,14 @@
     "css-brunch": "1.6.0",
     "clean-css-brunch": "1.6.0",
     "javascript-brunch": "1.6.0",
-    "uglify-js-brunch": "1.7.2",
-    "jade-brunch": "~1.7.2",
-
-    "express": "4.13.3",
-    "compression": "1.6.0"
+    "ng-annotate-uglify-js-brunch": "2.0.0",
+    "angularjs-templates-brunch": "1.0.0"
   },
   "devDependencies": {
 
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "^3.0.0"
   }
 }

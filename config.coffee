@@ -1,13 +1,22 @@
 exports.config =
+  modules:
+    definition: false
+    wrapper: false
   files:
+  
     javascripts:
       joinTo:
         'js/app.js': /^app/
-        'js/vendor.js': /^bower_components/
+        'js/vendor.js': /^(bower_components|vendor)/
+
     stylesheets:
-      joinTo: 'css/app.css'
+      joinTo: 
+        'css/app.css':  /^app/
+
     templates:
-      joinTo: 'js/templates.js'
+      joinTo:
+        'js/templates.js': /^app/
+
 overrides:
   production:
     sourceMaps: 'absoluteUrl'
@@ -22,3 +31,10 @@ overrides:
     plugins:
       coffeelint:
         pattern: /\A\Z/   
+
+plugins:
+    uglify:
+      mangle: false
+      compress:
+        global_defs:
+          DEBUG: false
