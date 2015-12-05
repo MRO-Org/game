@@ -1,4 +1,4 @@
-angular.module('app.modules.profile', [])
+angular.module('app')
 .controller('ProfilCtrl', function($scope) {
 	// CONST
 	$scope.wikiUrl = 'http://github.com/MRO-Org/contribute/';

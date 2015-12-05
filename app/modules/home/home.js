@@ -1,5 +1,4 @@
-angular.module('app.modules.home', [])
-
+angular.module('app')
 .controller('HomeCtrl', function($scope) {
   $scope.myInterval = 3*1000;
   $scope.noWrapSlides = false;

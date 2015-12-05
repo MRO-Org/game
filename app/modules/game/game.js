@@ -1,5 +1,4 @@
-angular.module('app.modules.game', [])
-
+angular.module('app')
 .controller('GameCtrl', function($scope) {
 
 });

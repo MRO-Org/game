@@ -18,11 +18,11 @@
   <script src="js/templates.js" ></script>
   <script src="js/app.js" ></script>
 </head>
-<body layout="column">
+<body layout="column" ng-controller="NavCtrl">
 
 <md-toolbar layout="row">
   <div class="md-toolbar-tools">
-    <md-button ng-click="vm.toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+    <md-button ng-click="openLeftMenu()" hide-gt-sm class="md-icon-button">
       <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">
       </md-icon>
     </md-button>

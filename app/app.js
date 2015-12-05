@@ -8,10 +8,7 @@ angular.module('app', [
   'material.core',
 
   'app.version',
-  'app.modules.home',
-  'app.modules.game',
   'app.modules.character',
-  'app.modules.profile',
 ,]);
 
 angular.module('app')
@@ -32,4 +29,11 @@ angular.module('app')
 
   // Without server side support html5 must be disabled.
   $locationProvider.html5Mode(false);
+});
+
+angular.module('app')
+.controller('NavCtrl', function($scope, $mdSidenav) {
+  $scope.openLeftMenu = function() {
+    $mdSidenav('left').toggle();
+  };
 });
