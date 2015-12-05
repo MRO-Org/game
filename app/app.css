@@ -1,3 +1,6 @@
-body {
-  background-color: red;
+.layout-content,
+.doc-content {
+  max-width: 864px;
+  margin: 16px;
+  box-sizing: border-box;
 }

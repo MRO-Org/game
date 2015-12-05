@@ -1,11 +1,41 @@
-<p>This is profile.</p>
+<div ng-controller="ProfilCtrl" class="doc-content" layout="column" ng-cloak> 
 
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Compte</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content layout-padding class="autoScroll" >
+
+	  <p>Changez les paramètres de base de votre compte et vos paramètres de langue.</p>    
+
+    <md-input-container class="md-block">
+      <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+      <input ng-model="user.name" ng-change="change()" ng-required="true" type="text" placeholder="Nom d'utilisateur">
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+      <input ng-model="user.email" ng-change="change()" type="email" type="email" placeholder="Email (required)" ng-required="true">
+      Votre email ne sera pas rendu public.
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-icon-right md-block">
+      <label>Langue</label>
+      <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+      <md-select ng-model="user.lang">
+        <md-option ng-repeat="i in langs" value="{{i.value}}">
+          {{i.value}}
+        </md-option>
+      </md-select>
+      Vous souhaitez apporter votre soutien à la traduction ? Visitez notre <a ng-href="{{wikiUrl}}" target="_blank">Centre de Traduction</a>.
+    </md-input-container>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised md-primary" ng-click="save()">Enregistrer les modifications</md-button>
+    </section>
+
+  </md-content>
+
 </div>
-
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-</button>

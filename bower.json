@@ -9,7 +9,7 @@
     "test"
   ],
   "dependencies": {
-    "angular-material":  "1.0.0-rc5-master-4b24259",
+    "angular-material":  "1.0.0-rc6",
     "angular": "1.4.8",
     "angular-bootstrap": "0.14.3",
     "angular-sanitize": "1.4.8",
