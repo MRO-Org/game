@@ -1,4 +1,4 @@
-<div ng-controller="GameCtrl">
+<div ng-controller=SheetCtrl">
 
 <h1>Yeah full screen</h1>
 
