@@ -6,9 +6,10 @@ angular.module('app', [
   'templates',
   'ngMaterial',
   'material.core',
-
+  
   'app.version',
   'app.modules.character',
+  'app.modules.profile',
 ,]);
 
 angular.module('app')
@@ -32,7 +33,8 @@ angular.module('app')
 });
 
 angular.module('app')
-.controller('NavCtrl', function($scope, $mdSidenav) {
+.controller('NavCtrl', function($scope, $mdSidenav, $localStorage,
+    $sessionStorage) {
   $scope.openLeftMenu = function() {
     $mdSidenav('left').toggle();
   };

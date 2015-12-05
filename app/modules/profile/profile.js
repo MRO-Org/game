@@ -1,5 +1,8 @@
-angular.module('app')
-.controller('ProfilCtrl', function($scope) {
+angular.module('app.modules.profile', [
+  'ngStorage',
+])
+.controller('ProfilCtrl', function($scope, $localStorage,
+    $sessionStorage, $mdToast) {
 	// CONST
 	$scope.wikiUrl = 'http://github.com/MRO-Org/contribute/';
 	$scope.langs = [
@@ -8,12 +11,22 @@ angular.module('app')
 	];
 	// ACTIONS
 	$scope.save = function() {
-		alert('TODO!');
+    	$scope.$storage.user = $scope.user;
+    	$mdToast.show(
+	    $mdToast.simple()
+	        .textContent('Saved!')
+	        .position('top right')
+	        .hideDelay(3000)
+	    );
 	};
 	// INIT
-	$scope.user = {
+	var testDefaultUser = {
 		name: 'mysusername',
 		email: 'mysusername@gmail.com',
 		lang: 'fr'
 	};
+	$scope.$storage = $localStorage.$default({
+      	user: testDefaultUser
+    });
+    $scope.user = $scope.$storage.user;
 });

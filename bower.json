@@ -15,7 +15,8 @@
     "angular-sanitize": "1.4.8",
     "angular-resource": "1.4.8",
     "angular-route": "1.4.8",
-    "angular-cookies": "1.4.8"
+    "angular-cookies": "1.4.8",
+    "ngstorage": "0.3.10"
   },
   "devDependencies": {
     "auto-reload-brunch": "> 1.0 < 1.8"
