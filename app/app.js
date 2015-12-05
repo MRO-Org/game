@@ -10,6 +10,7 @@ angular.module('app', [
   'app.version',
   'app.modules.home',
   'app.modules.game',
+  'app.modules.character'
 ,]);
 
 angular.module('app')
