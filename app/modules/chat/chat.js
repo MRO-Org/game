@@ -1,7 +1,18 @@
 'use strict';
 
 angular.module('app')
-.controller('ChatCtrl', function($scope, socket) {
+.controller('ChatCtrl', function($scope, socket, $localStorage) {
+
+  // local cache
+  // ================
+
+  // get users from local cache
+  $scope.users = $localStorage.users;
+
+  // set users to local cache
+  $scope.$on("$destroy", function() {
+    $localStorage.users = $scope.users;
+  });
 
   // Socket listeners
   // ================
@@ -54,7 +65,6 @@ angular.module('app')
         $scope.users[i] = newName;
       }
     }
-
     $scope.messages.push({
       user: 'chatroom',
       text: 'User ' + oldName + ' is now known as ' + newName + '.'
@@ -90,10 +100,17 @@ angular.module('app')
     // add the message to our model locally
     $scope.messages.push({
       user: $scope.name,
-      text: $scope.message
+      text: $scope.message,
+      face: 'img/testface.jpg'
     });
 
     // clear message box
     $scope.message = '';
   };
+
+  $scope.messages.push({
+      user: 'chatroom',
+      text: 'Welcome!'
+  });
+
 });
