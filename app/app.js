@@ -24,6 +24,7 @@ angular.module('app')
     .when('/profile', {templateUrl: 'app/modules/profile/profile.html'})
     .when('/game', {templateUrl: 'app/modules/game/game.html'})
     .when('/sheet', {templateUrl: 'app/modules/character/sheet.html'})
+    .when('/chat', {templateUrl: 'app/modules/chat/chat.html'})
 
     // Catch all
     .otherwise({redirectTo: '/'});

@@ -2,20 +2,16 @@ var express = require('express');
 var compression = require('compression');
 
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-app.set('port', (process.env.PORT || 5000));
-
-// views is directory for all template files
-app.use('/', express.static('server/public'));
+app.use('/', express.static('./public'));
 app.use(compression());
 
-// REST
-app.get('/test', function (req, res) {
-  res.send('Hello World!');
+io.on('connection', function(socket){
+  console.log('a user connected');
 });
 
-var server = app.listen(app.get('port'), function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
+http.listen(5000, function(){
+  console.log('listening on *:5000');
 });
