@@ -1,0 +1,15 @@
+<div ng-cloak layout="row" layout-padding class="radioButtondemoBasicUsage">
+  <form ng-submit="submit()" ng-controller="NewGameCtrl" >
+
+    <p style="margin-top: 0;">Selected Avatar: <span class="radioValue">{{ game.type }}</span></p>
+
+    <md-radio-group ng-model="game.type">
+      <md-radio-button ng-repeat="it in avatarData"
+                       ng-value="it.value"
+                       aria-label="{{it.title}}">
+          <md-icon md-svg-icon="{{it.id}}"></md-icon> {{it.title}}
+      </md-radio-button>
+    </md-radio-group>
+
+  </form>
+</div>
