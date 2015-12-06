@@ -11,19 +11,19 @@
 	  <p>Changez les paramètres de base de votre compte et vos paramètres de langue.</p>    
 
     <md-input-container class="md-block">
-      <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+      <md-icon md-svg-icon="social:person" class="name"></md-icon>
       <input ng-model="user.name" ng-change="change()" ng-required="true" type="text" placeholder="Nom d'utilisateur">
     </md-input-container>
 
     <md-input-container class="md-block">
-      <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+      <md-icon md-svg-icon="communication:email" class="email"></md-icon>
       <input ng-model="user.email" ng-change="change()" type="email" type="email" placeholder="Email (required)" ng-required="true">
       Votre email ne sera pas rendu public.
     </md-input-container>
 
     <md-input-container class="md-icon-float md-icon-right md-block">
       <label>Langue</label>
-      <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+      <md-icon md-svg-icon="maps:place"></md-icon>
       <md-select ng-model="user.lang">
         <md-option ng-repeat="i in langs" value="{{i.value}}">
           {{i.value}}
