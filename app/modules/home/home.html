@@ -1,6 +1,5 @@
 <div ng-controller="HomeCtrl" class="doc-content test" ng-cloak>
- <md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
-    <div flex="50" layout="column">
+ <md-content class="md-padding" layout="row" layout-sm="column" layout-wrap layout-align="center start">
       
       <md-card>
         <md-card-title>
@@ -34,13 +33,12 @@
           <img src="images/avatar.jpg">
           </div>
           <md-card-actions layout="row" layout-align="end center">
-            <md-button class="md-raised md-primary" ng-href="{{profilUrl}}">Settings</md-button>
+            <md-button class="md-raised md-primary" ng-href="{{profilUrl}}">
+              <md-icon md-svg-icon="action:settings" class="email"></md-icon>
+          </md-button>
           </md-card-actions>
         </md-card-content>
       </md-card>
-
-    </div>
-    <div flex="50" layout="column">
 
       <md-card>
         <md-card-title>
@@ -77,6 +75,5 @@
         </md-card-actions>
       </md-card>
 
-    </div>
   </md-content>
 </div> 
