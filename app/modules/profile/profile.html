@@ -2,7 +2,10 @@
 
   <md-toolbar>
     <div class="md-toolbar-tools">
-      <h2 class="md-flex">Compte</h2>
+        <md-button ng-href="{{backUrl}}">
+          <md-icon md-svg-icon="navigation:arrow_back" class="name"></md-icon>
+        </md-button>
+       Compte
     </div>
   </md-toolbar>
 
@@ -26,7 +29,7 @@
       <md-icon md-svg-icon="maps:place"></md-icon>
       <md-select ng-model="user.lang">
         <md-option ng-repeat="i in langs" value="{{i.value}}">
-          {{i.value}}
+          {{i.name}}
         </md-option>
       </md-select>
       Vous souhaitez apporter votre soutien à la traduction ? Visitez notre <a ng-href="{{wikiUrl}}" target="_blank">Centre de Traduction</a>.

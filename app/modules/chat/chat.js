@@ -2,6 +2,8 @@
 
 angular.module('app')
 .controller('ChatCtrl', function($scope, socket, $localStorage) {
+  
+  $scope.backUrl = '#/home';
 
   // local cache
   // ================

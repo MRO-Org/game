@@ -1,7 +1,11 @@
 <div ng-controller="ChatCtrl" class="chat doc-content" layout="column" flex layout-fill ng-cloak>
 
   <md-toolbar md-scroll-shrink>
-    <div class="md-toolbar-tools">My Messages</div>
+    <div class="md-toolbar-tools">
+        <md-button ng-href="{{backUrl}}">
+          <md-icon md-svg-icon="navigation:arrow_back" class="name"></md-icon>
+        </md-button>
+      My Messages</div>
       <md-progress-linear md-mode="indeterminate"></md-progress-linear>
   </md-toolbar>
 
@@ -45,13 +49,14 @@
 
       <p> Your current user name is {{name}}</p>
 
-    <div layout layout-sm="column">
+    <form ng-submit="changeName()" layout layout-sm="column">
       <md-input-container flex>
         <input size="60" ng-model="newName" placeholder="Change your name"/>
       </md-input-container >
       <md-input-container flex>
         <md-button class="md-raised md-primary" ng-click="changeName()">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
       </md-input-container >
-    </div>
+    </form>
+
   </md-content>
 </div>

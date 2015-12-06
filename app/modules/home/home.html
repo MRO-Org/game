@@ -33,16 +33,8 @@
           <div class="md-media-lg">
           <img src="images/avatar.jpg">
           </div>
-          <md-card-actions layout="column">
-            <md-button class="md-icon-button" ng-disabled="true">
-              <md-icon md-svg-icon="action:favorite"></md-icon>
-            </md-button>
-            <md-button class="md-raised" ng-href="{{profilUrl}}">
-              <md-icon md-svg-icon="navigation:menu"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" ng-disabled="true">
-              <md-icon md-svg-icon="mdi:share"></md-icon>
-            </md-button>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-raised md-primary" ng-href="{{profilUrl}}">Settings</md-button>
           </md-card-actions>
         </md-card-content>
       </md-card>

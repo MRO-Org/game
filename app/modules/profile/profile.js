@@ -8,6 +8,7 @@ angular.module('app.modules.profile', [
 		{ value: 'fr', 	name: 'Français' },
 		{ value: 'en', 	name: 'English' }
 	];
+	$scope.backUrl = '#/home';
 	// ACTIONS
 	$scope.save = function() {
     	$scope.$storage.user = $scope.user;

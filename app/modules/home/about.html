@@ -1,24 +1,36 @@
-<div layout-sm="col" layout-gt-sm="column" layout-padding layout-align="start start ">
- <div>
-<img src="images/about.jpg" class="img-thumbnail">
-</div>
- <div>
-<h1> About the Game </h1>
+<div ng-controller="AboutCtrl" class="doc-content">
 
-<p>
-Set in the lush and vibrant world of the Forgotten Realms, Sword Coast Legends offers an all-new way to enjoy the time-tested magic of playing Dungeons n Dragons as a shared storytelling experience. With a deep narrative developed by a team of long-time industry veterans and a partnership with Wizards of the Coast, the single player campaign of Sword Coast Legends brings the world of Faerûn home like never before.
-</p>
+	<md-button ng-href="{{backUrl}}">
+	  <md-icon md-svg-icon="navigation:arrow_back" class="name"></md-icon>
+	</md-button>
 
-Sword Coast Legends also brings the roleplaying dynamic between players and Dungeon Masters to life with DM Mode, a first-of-its-kind real-time experience in which Dungeon Masters guide players through unique customizable adventures. In DM Mode, the Dungeon Master engages players and empowers them to have fun in a way that suits the party best while creating a tailored, non-adversarial 4 with 1 experience that any RPG or pen-and-paper fan will enjoy.
-</p>
+	<div layout="row" layout-sm="column">
+	  	<div hide show-gt-sm flex>
+			<img src="images/about.jpg" class="img-thumbnail">
+		 </div>
+		  <div flex>
+			<h1> About the Game </h1>
 
-<h1>Game Features:</h1>
-<ul>
-<li>Single player campaign created by members of the leadership team that brought you Dragon Age™: Origins</li>
-<li>Choose from five playable races and six unique character classes to build your own stalwart adventurer</li>
-<li>A return to form, Sword Coast Legends is the compelling and complex RPG you've been waiting for and features pause time, party-based tactical combat and involving storylines</li>
-<li>Dungeon Master Mode: Create your own epic adventure to share with your friends, or enhance their experience in real time as they traverse your dungeon</li>
-<li>Set in the Dungeons n Dragons Forgotten Realms universe based on the fifth edition ruleset and populated with Dungeons n Dragons lore and legend</li>
-</ul>
-</p>
+			<p>
+			Set in the lush and vibrant world of the Forgotten Realms, Sword Coast Legends offers an all-new way to enjoy the time-tested magic of playing Dungeons n Dragons as a shared storytelling experience. With a deep narrative developed by a team of long-time industry veterans and a partnership with Wizards of the Coast, the single player campaign of Sword Coast Legends brings the world of Faerûn home like never before.
+			</p>
+
+			Sword Coast Legends also brings the roleplaying dynamic between players and Dungeon Masters to life with DM Mode, a first-of-its-kind real-time experience in which Dungeon Masters guide players through unique customizable adventures. In DM Mode, the Dungeon Master engages players and empowers them to have fun in a way that suits the party best while creating a tailored, non-adversarial 4 with 1 experience that any RPG or pen-and-paper fan will enjoy.
+			</p>
+
+			</div>
+		</div>
+		<div layout="row">
+		  <div flex>
+			<h1>Game Features:</h1>
+			<ul>
+			<li>Single player campaign created by members of the leadership team that brought you Dragon Age™: Origins</li>
+			<li>Choose from five playable races and six unique character classes to build your own stalwart adventurer</li>
+			<li>A return to form, Sword Coast Legends is the compelling and complex RPG you've been waiting for and features pause time, party-based tactical combat and involving storylines</li>
+			<li>Dungeon Master Mode: Create your own epic adventure to share with your friends, or enhance their experience in real time as they traverse your dungeon</li>
+			<li>Set in the Dungeons n Dragons Forgotten Realms universe based on the fifth edition ruleset and populated with Dungeons n Dragons lore and legend</li>
+			</ul>
+			</p>
+		</div>
+	</div>
 </div>
