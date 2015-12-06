@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <!-- STYLE -->
+  <link rel="icon" type="image/png" href="icon.png" />
   <link href="css/vendor.css" rel="stylesheet"/>
   <link href="css/app.css" rel="stylesheet"/>
 
+  <!-- SCRIPTS -->
   <script type="text/javascript">
       window.brunch = window.brunch || {};
       window.brunch["auto-reload"] = {
@@ -20,6 +23,7 @@
 </head>
 <body layout="column" ng-controller="NavCtrl">
 
+<!-- NAV BAR -->
 <md-toolbar layout="row">
   <div class="md-toolbar-tools">
     <md-button ng-click="openLeftMenu()" hide-gt-sm class="md-icon-button">
@@ -32,6 +36,7 @@
 
 <div layout="row" flex>
 
+  <!-- NAV CONTENT -->
   <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
     <md-button class="md-accent" ng-href="#/home"> Home </md-button>
     <md-button class="md-accent" ng-href="#/about"> About </md-button>
@@ -43,6 +48,7 @@
 
   <div layout="column" flex id="content">
       
+      <!-- VIEW/PAGE -->
       <div ng-view>Loading...</div>
 
   </div>
