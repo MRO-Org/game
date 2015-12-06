@@ -1,7 +1,9 @@
 angular.module('app')
-.controller('NewGameCtrl', function($scope) {
+.controller('NewGameCtrl', function($scope, $location) {
 	// ACTION
-
+  $scope.submit = function() {
+    $location.path('/game');
+  };
 	// INIT
 	$scope.game = {
       type : 'role'
