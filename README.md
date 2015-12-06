@@ -1,7 +1,7 @@
 Game
 =============
 
-http://project-myrpgonline.herokuapp.com/play
+http://project-myrpgonline.herokuapp.com/
 
 ## Stack
 
