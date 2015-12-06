@@ -1,46 +1,90 @@
-<md-content layout="column" flex class="md-padding">
-        This Starter Application consists of a Toolbar, SideNav (with two buttons), and Content area.
-        <p>This is the content area! </p>
-</md-content>
+<div ng-controller="HomeCtrl" class="doc-content test" ng-cloak>
+ <md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
+    <div flex="50" layout="column">
+      
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Games</span>
+            <span class="md-subhead">Large</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg">
+          <img src="images/carousel-603-300.jpg">
+                      </div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-disabled="true">Create</md-button>
+          <md-button ng-disabled="true">Join</md-button>
+          <md-button ng-disabled="true">Watch</md-button>
+          <md-button ng-disabled="true">Replay</md-button>
+        </md-card-actions>
+      </md-card>
 
-<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
-<div flex="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Profile</span>
+            <span class="md-subhead">Manage yous account, your avatar, language and email.</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-lg">
+          <img src="images/avatar.jpg">
+          </div>
+          <md-card-actions layout="column">
+            <md-button class="md-icon-button" ng-disabled="true">
+              <md-icon md-svg-icon="action:favorite"></md-icon>
+            </md-button>
+            <md-button class="md-raised" ng-href="{{profilUrl}}">
+              <md-icon md-svg-icon="navigation:menu"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-disabled="true">
+              <md-icon md-svg-icon="mdi:share"></md-icon>
+            </md-button>
+          </md-card-actions>
+        </md-card-content>
+      </md-card>
 
-  <md-card>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Card with image</span>
-        <span class="md-subhead">Large</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media">
-        	<img src="images/carousel-603-300.jpg">
-        </div>
-      </md-card-title-media>
-    </md-card-title>
-    <md-card-actions layout="row" layout-align="end center">
-      <md-button>Action 1</md-button>
-      <md-button>Action 2</md-button>
-    </md-card-actions>
-  </md-card>
+    </div>
+    <div flex="50" layout="column">
 
-  <md-card>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Card with image</span>
-        <span class="md-subhead">Large</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media">
-        	<img src="images/carousel-602-300.jpg">
-        </div>
-      </md-card-title-media>
-    </md-card-title>
-    <md-card-actions layout="row" layout-align="end center">
-      <md-button>Action 1</md-button>
-      <md-button>Action 2</md-button>
-    </md-card-actions>
-  </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Characters</span>
+            <span class="md-subhead">Sheet from your previous games.</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm">
+          <img src="images/char.jpg">
+            </div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-disabled="true">Create</md-button>
+          <md-button ng-disabled="true">Get</md-button>
+        </md-card-actions>
+      </md-card>
 
-  </div>
-</md-content>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Chat</span>
+            <span class="md-subhead">Join a channel</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-md">
+          <img src="images/chat-empty.svg">
+            </div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-raised md-primary" ng-href="{{chatUrl}}">Join</md-button>
+        </md-card-actions>
+      </md-card>
+
+    </div>
+  </md-content>
+</div> 

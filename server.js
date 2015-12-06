@@ -5,6 +5,7 @@ var express = require('express'),
 
 // Configuration
 var app = express();
+app.set('port', (process.env.PORT || 5000));
 app.use(compression());
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -16,6 +17,8 @@ app.use('/', express.static('./public'));
 io.on('connection', socket);
 
 // Start server
-http.listen(5000, function(){
-  console.log('listening on *:5000');
+var server = http.listen(app.get('port'), function(){
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log('Example app listening at http://%s:%s', host, port);
 });

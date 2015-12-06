@@ -32,14 +32,14 @@
   </md-content>
   <md-content flex layout-padding >
 
-    <div layout layout-sm="column">
+    <form ng-submit="sendMessage()" layout layout-sm="column">
       <md-input-container flex>
         <input size="60" ng-model="message" placeholder="Type your message here..."/>
       </md-input-container >
       <md-input-container flex>
         <md-button class="md-raised md-primary" ng-click="sendMessage()">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
       </md-input-container >
-    </div>
+    </form>
 
     <md-divider></md-divider>
 
