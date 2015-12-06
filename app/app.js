@@ -51,6 +51,7 @@ angular.module('app')
                 .iconSet('notification', 'img/icons/sets/notification-icons.svg', 24)
                 .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
                 .iconSet('toggle', 'img/icons/sets/toggle-icons.svg', 24)
+                .iconSet('mdi', 'img/icons/sets/mdi-icons.svg', 24)
 }]);
 
 angular.module('app')
