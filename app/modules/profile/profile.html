@@ -9,7 +9,7 @@
     </div>
   </md-toolbar>
 
-  <md-content layout-padding class="autoScroll" >
+  <md-content layout-padding class="autoScroll" ng-click="changed=true">
 
 	  <p>Changez les paramètres de base de votre compte et vos paramètres de langue.</p>    
 
@@ -36,7 +36,7 @@
     </md-input-container>
 
     <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button class="md-raised md-primary" ng-click="save()">Enregistrer les modifications</md-button>
+      <md-button class="md-raised md-primary" ng-click="save()" ng-disabled="!changed">Enregistrer les modifications</md-button>
     </section>
 
   </md-content>

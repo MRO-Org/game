@@ -2,6 +2,7 @@ angular.module('app.modules.profile', [
   'ngStorage',
 ])
 .controller('ProfilCtrl', function($scope, $localStorage, $mdToast) {
+	$scope.changed = false;
 	// CONST
 	$scope.wikiUrl = 'http://github.com/MRO-Org/contribute/';
 	$scope.langs = [

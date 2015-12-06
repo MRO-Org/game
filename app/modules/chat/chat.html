@@ -41,7 +41,7 @@
         <input size="60" ng-model="message" placeholder="Type your message here..."/>
       </md-input-container >
       <md-input-container flex>
-        <md-button class="md-raised md-primary" ng-click="sendMessage()">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
+        <md-button class="md-raised md-primary" ng-click="sendMessage()" ng-disabled="!message">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
       </md-input-container >
     </form>
 
@@ -54,7 +54,7 @@
         <input size="60" ng-model="newName" placeholder="Change your name"/>
       </md-input-container >
       <md-input-container flex>
-        <md-button class="md-raised md-primary" ng-click="changeName()">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
+        <md-button class="md-raised md-primary" ng-click="changeName()" ng-disabled="!newName"> Change </md-button>
       </md-input-container >
     </form>
 
