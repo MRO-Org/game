@@ -38,7 +38,7 @@
 
     <form ng-submit="sendMessage()" layout layout-sm="column">
       <md-input-container flex>
-        <input size="60" ng-model="message" placeholder="Type your message here..."/>
+        <input size="60" ng-model="message" placeholder="Type your message here..." autofocus/>
       </md-input-container >
       <md-input-container flex>
         <md-button class="md-raised md-primary" ng-click="sendMessage()" ng-disabled="!message">Send <md-icon md-svg-icon="content:send" class="email"></md-icon> </md-button>
