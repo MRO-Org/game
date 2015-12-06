@@ -1,5 +1,8 @@
 angular.module('app')
 .controller('NewGameCtrl', function($scope) {
+	// ACTION
+
+	// INIT
 	$scope.game = {
       type : 'role'
     };
@@ -20,11 +23,4 @@ angular.module('app')
         title: 'AD&D like',
         value: 'community-adnd_clone'
       }];
-    $scope.radioData = [
-      { label: '1', value: 1 },
-      { label: '2', value: 2 },
-      { label: '3', value: '3', isDisabled: true },
-      { label: '4', value: '4' }
-    ];
-
 });
