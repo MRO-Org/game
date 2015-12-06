@@ -59,7 +59,11 @@ angular.module('app')
 angular.module('app')
 .controller('NavCtrl', function($scope, $mdSidenav, $localStorage,
     $sessionStorage) {
+  // ACTION
   $scope.openLeftMenu = function() {
+    $mdSidenav('left').toggle();
+  };
+  $scope.closeLeftMenu = function() {
     $mdSidenav('left').toggle();
   };
 });
