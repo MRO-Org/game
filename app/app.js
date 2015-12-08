@@ -6,7 +6,8 @@ angular.module('app', [
   'templates',
   'ngMaterial',
   'material.core',
-  
+  'md.data.table',
+
   'app.version',
   'app.modules.character',
   'app.modules.profile',

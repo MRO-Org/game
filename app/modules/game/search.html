@@ -1,30 +1,37 @@
-<div ng-cloak layout="row" layout-padding class="">
-  <form ng-submit="submit()" ng-controller="SearchGameCtrl" >
+<div ng-controller="SearchGameCtrl" ng-cloak>
 
-<h2>Games List</h2>
-    <md-divider></md-divider>
-    <md-radio-group ng-model="selectedIndex" >
-      <div ng-repeat='i in items' class="row" >
-        <div flex layout='row' layout-padding layout-align="start center" >
-          <md-radio-button  ng-disabled="i.isDisabled"
-              ng-value="$index"
-              class="md-primary" >
-            {{i.name}}
-            ({{i.status}})
-            {{i.fullName}}
-          </md-radio-button>
-        </div>
-      </div>
-    </md-radio-group>
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button aria-label="Go Back" ng-href="{{backUrl}}">
+      <md-icon md-svg-icon="navigation:arrow_back"></md-icon>
+    </md-button>
+    <h2>
+      <span>Game List</span>
+    </h2>
+    <span flex></span>
+  </div>
+</md-toolbar>
 
-    <md-divider></md-divider>
 
-    <div class="summary" flex layout="row" layout-align="space-between center" ng-show="selectedIndex">
-      <div flex-initial>
-        <span class="title">Selected</span>: <span class="md-checked">{{selected()}}</span>
-      </div>
-      <md-button class="md-raised md-primary" ng-click="submit()">Next</md-button>
-    </div>
+<md-data-table-container>
+  <table md-data-table md-progress="deferred">
+    <thead md-order="query.order" md-trigger="onOrderChange">
+      <tr>
+        <th name="Name" order-by="name"></th>
+        <th name="Details" order-by="fullName"></th>
+        <th name="Status" order-by="status"></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr md-auto-select ng-repeat="i in items" ng-class="{inactive: i.status ==='CLOSED'}" ng-click="open(i.id)" class="clickable">
+        <td>{{i.name}}</td>
+        <td>{{i.fullName}}</td>
+        <td>{{i.status}}</td>
+        <td> <md-button class="md-raised md-primary"> <md-icon md-svg-icon="navigation:chevron_right"></md-icon> </md-button></td>
+      </tr>
+    </tbody>
+  </table>
+</md-data-table-container>
 
-  </form>
 </div>

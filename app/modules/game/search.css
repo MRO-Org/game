@@ -1,0 +1,7 @@
+.inactive td {
+  color: grey !important;
+}
+.clickable:hover {
+  cursor: pointer;
+  cursor: hand;
+}
