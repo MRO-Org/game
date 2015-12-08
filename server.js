@@ -16,6 +16,19 @@ app.use('/', express.static('./public'));
 // Socket.io Communication
 io.on('connection', socket);
 
+// REST
+app.get('/api/game', function (req, res) {
+  var items = [
+    {id: '1', name: 'Test2', fullName: 'Another game...', status: 'CLOSED', isDisabled: true }
+    ,
+    {id: '2', name: 'Test', fullName: 'A game about things...', status: 'CREATION', isDisabled: false }
+    ,
+    {id: '3', name: 'Test3', fullName: 'A things...', status: 'CREATION', isDisabled: false }
+  ];
+  res.send(items);
+});
+
+
 // Start server
 var server = http.listen(app.get('port'), function(){
   var host = server.address().address;

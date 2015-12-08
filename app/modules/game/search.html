@@ -12,8 +12,11 @@
   </div>
 </md-toolbar>
 
-
-<md-data-table-container>
+<div ng-show="isLoading">
+<md-progress-linear md-mode="indeterminate"></md-progress-linear>
+  <h4 class="md-title">Loading ...</h4>
+</div>
+<md-data-table-container ng-show="!isLoading  ">
   <table md-data-table md-progress="deferred">
     <thead md-order="query.order" md-trigger="onOrderChange">
       <tr>
@@ -24,14 +27,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr md-auto-select ng-repeat="i in items" ng-class="{inactive: i.status ==='CLOSED'}" ng-click="open(i.id)" class="clickable">
+      <tr md-auto-select ng-repeat="i in items" ng-class="{inactive: i.status ==='CLOSED'}"  class="clickable">
         <td>{{i.name}}</td>
         <td>{{i.fullName}}</td>
         <td>{{i.status}}</td>
-        <td> <md-button class="md-raised md-primary"> <md-icon md-svg-icon="navigation:chevron_right"></md-icon> </md-button></td>
+        <td> <md-button class="md-raised md-primary" ng-disabled="{{i.isDisabled}}" ng-click="open(i.id)"> <md-icon md-svg-icon="navigation:chevron_right"></md-icon> </md-button></td>
       </tr>
     </tbody>
   </table>
 </md-data-table-container>
+
+<md-data-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{items.length}}" md-trigger="onPaginationChange"></md-data-table-pagination>
+
 
 </div>

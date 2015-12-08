@@ -25,7 +25,7 @@ angular.module('app')
     .when('/profile', {templateUrl: 'app/modules/profile/profile.html'})
     .when('/game/search', {templateUrl: 'app/modules/game/search.html'})
     .when('/game/new',    {templateUrl: 'app/modules/game/new.html'})
-    .when('/game',        {templateUrl: 'app/modules/game/game.html'})
+    .when('/game/:id',        {templateUrl: 'app/modules/game/game.html'})
     .when('/sheet', {templateUrl: 'app/modules/character/sheet.html'})
     .when('/chat', {templateUrl: 'app/modules/chat/chat.html'})
 
